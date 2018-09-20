@@ -8,7 +8,9 @@ docker push jaredwmitchell/multi-client:$GIT_SHA
 docker push jaredwmitchell/multi-server:$GIT_SHA
 docker push jaredwmitchell/multi-worker:$GIT_SHA
 
+
 kubectl apply -f k8s
+#make sure the latest images get pulled
 kubectl set image deployment/client-deployment client=jaredwmitchell/multi-client:$GIT_SHA
 kubectl set image deployment/server-deployment server=jaredwmitchell/multi-server:$GIT_SHA
 kubectl set image deployment/worker-deployment worker=jaredwmitchell/multi-worker:$GIT_SHA
