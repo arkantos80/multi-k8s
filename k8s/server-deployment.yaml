@@ -25,9 +25,9 @@ spec:
             - name: PGUSER
               value: postgres
             - name: PGHOST
-              value: postgres-cluster-ip-service
+              value: cockroachdb
             - name: PGPORT
-              value: '5432'
+              value: '26257'
             - name: PGDATABASE
               value: postgres
             - name: PGPASSWORD
